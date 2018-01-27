@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  layout "content"
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
   # GET /reviews
