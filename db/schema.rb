@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180119231556) do
+ActiveRecord::Schema.define(version: 20180130023608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,11 @@ ActiveRecord::Schema.define(version: 20180119231556) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "cover"
+    t.string "imgcover_file_name"
+    t.string "imgcover_content_type"
+    t.integer "imgcover_file_size"
+    t.datetime "imgcover_updated_at"
   end
 
   create_table "reviews", force: :cascade do |t|

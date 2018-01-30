@@ -22,6 +22,11 @@
   </div>
 
   <div class="field">
+        <%= form.label :imgcover %>
+        <%= form.file_field :imgcover %>
+  </div>
+
+  <div class="field">
     <%= form.label :place %>
     <%= form.text_field :place, id: :report_place %>
   </div>
@@ -34,6 +39,10 @@
   <div class="field">
     <%= form.label :body %>
     <%= form.text_area :body, id: :report_body %>
+  </div>
+  <div class="field">
+    <%= form.label :cover %>
+    <%= form.select(:cover,['True', 'False']) %>
   </div>
 
   <div class="actions">
