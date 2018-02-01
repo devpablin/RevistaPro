@@ -9,13 +9,17 @@
     flex-direction: column;
     width: 50%;
     align-items: center;
-    img,div,h1,p{
+    a,div,h1,p{
       width: 80%;
       max-width: 502px;
       align-self: center;
     }
     .author{
       text-align: right;
+    }
+    a img{
+      width: 100%;
+      max-width: 502px;
     }
 
   }

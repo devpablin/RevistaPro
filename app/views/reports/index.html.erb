@@ -7,7 +7,7 @@
 <div class="highlights-container">
   <div class="highlight">
     <div><%=@headers.first.place%></div>
-    <%= image_tag(@headers.first.imgcover.url(:thumb), class: "img-highlight")%>
+    <%= link_to image_tag(@headers.first.imgcover.url(:thumb), class: "img-highlight"), report_path(@headers.first)%>
     <div class="author"><span>por Author</span></div>
     <h1><%=@headers.first.title%></h1>
     <p><%=@headers.first.subtitle%></p>
@@ -16,7 +16,7 @@
     <h1><%=@headers.last.title%></h1>
     <p><%=@headers.last.subtitle%></p>
     <div><%=@headers.last.place%></div>
-    <%= image_tag(@headers.last.imgcover.url(:thumb), class: "img-highlight")%>
+    <%= link_to image_tag(@headers.last.imgcover.url(:thumb), class: "img-highlight"), report_path(@headers.last)%>
     <div class="author"><span>por Author</span></div>
 
   </div>

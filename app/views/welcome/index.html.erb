@@ -1,26 +1,28 @@
 <div class="home-container">
-  <%=image_tag(@portadas.first.imgcover.url(:normal), class: "img-slider")%>
-  <div class="home-content">
-    <%= render 'layouts/nav-home' %>
-    <div class="side-sponsors">
-      <div class="logo">
-        <%= link_to root_path do%>
-        <li>NOMBRE<br>MAGAZINE</li>
-        <% end %>
+  <% if @portadas.count > 0 %>
+    <%=image_tag(@portadas.first.imgcover.url(:normal), class: "img-slider")%>
+    <div class="home-content">
+      <%= render 'layouts/nav-home' %>
+      <div class="side-sponsors">
+        <div class="logo">
+          <%= link_to root_path do%>
+          <li>NOMBRE<br>MAGAZINE</li>
+          <% end %>
+        </div>
+        <ul>
+          <li>Sponsor 1</li>
+          <li>Sponsor 2</li>
+          <li>Sponsor 3</li>
+          <li>Sponsor 4</li>
+        </ul>
       </div>
-      <ul>
-        <li>Sponsor 1</li>
-        <li>Sponsor 2</li>
-        <li>Sponsor 3</li>
-        <li>Sponsor 4</li>
-      </ul>
-    </div>
-    <div class="titulares">
-      <h1 class="titulo"><%=@portadas.first.title%></h1>
-      <p class="descripchion">
-        <%=@portadas.first.subtitle%>
-      </p>
-    </div>
+        <div class="titulares">
+          <h1 class="titulo"><%=@portadas.first.title%></h1>
+          <p class="descripchion">
+            <%=@portadas.first.subtitle%>
+          </p>
+        </div>
   </div>
+  <% end %>
 
 </div>

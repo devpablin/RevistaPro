@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @portadas = Report.where(cover: 'true').first(3)
+    @portadas = Report.where(cover: "TRUE").first(3)
   end
 end
