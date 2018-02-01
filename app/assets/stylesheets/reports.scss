@@ -1,3 +1,43 @@
 // Place all the styles related to the Reports controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.highlights-container{
+  display: flex;
+  flex-direction: row;
+  .highlight{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    img,div,h1,p{
+      width: 80%;
+      max-width: 502px;
+      align-self: center;
+    }
+    .author{
+      text-align: right;
+    }
+
+  }
+}
+.index-reports{
+  .card-report{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    width: 70%;
+    .img-card{
+      width: 40%;
+      overflow: hidden;
+      img{
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .text-card h1{
+      margin: 0;
+    }
+  }
+}

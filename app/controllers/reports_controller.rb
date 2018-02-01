@@ -5,6 +5,7 @@ class ReportsController < ApplicationController
   # GET /reports
   # GET /reports.json
   def index
+    @headers = Report.last(2)
     @reports = Report.all
   end
 

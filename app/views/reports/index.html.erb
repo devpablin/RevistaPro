@@ -1,35 +1,39 @@
 <p id="notice"><%= notice %></p>
+<style media="screen">
+  #news{
+    border: solid 1px black;
+  }
+</style>
+<div class="highlights-container">
+  <div class="highlight">
+    <div><%=@headers.first.place%></div>
+    <%= image_tag(@headers.first.imgcover.url(:thumb), class: "img-highlight")%>
+    <div class="author"><span>por Author</span></div>
+    <h1><%=@headers.first.title%></h1>
+    <p><%=@headers.first.subtitle%></p>
+  </div>
+  <div class="highlight">
+    <h1><%=@headers.last.title%></h1>
+    <p><%=@headers.last.subtitle%></p>
+    <div><%=@headers.last.place%></div>
+    <%= image_tag(@headers.last.imgcover.url(:thumb), class: "img-highlight")%>
+    <div class="author"><span>por Author</span></div>
 
-<h1>Reports</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Subtitle</th>
-      <th>Place</th>
-      <th>Date</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @reports.each do |report| %>
-      <tr>
-        <td><%= report.title %></td>
-        <td><%= report.subtitle %></td>
-        <td><%= report.place %></td>
-        <td><%= report.date %></td>
-        <td><%= report.body %></td>
-        <td><%= link_to 'Show', report %></td>
-        <td><%= link_to 'Edit', edit_report_path(report) %></td>
-        <td><%= link_to 'Destroy', report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  </div>
+</div>
+<hr>
+<div class="index-reports">
+  <% @reports.each do |report| %>
+    <div class="card-report">
+      <div class="img-card">
+        <%= image_tag(report.imgcover.url(:thumb))%>
+      </div>
+      <div class="text-card">
+        <h1><%= report.title %></h1>
+        <p><%= report.subtitle %></p>
+        <div><%= report.place %> <%= report.date.to_time.strftime('%m.%d.%Y') %></div>
+        <div class="author"><span>por Author</span></div>
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Report', new_report_path %>
+</div>
