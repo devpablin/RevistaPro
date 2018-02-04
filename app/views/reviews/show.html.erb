@@ -1,39 +1,44 @@
-<p id="notice"><%= notice %></p>
+<div class="review-container">
+  <div class="disc-container">
+    <div class="disc-card">
+      <div class="img-review">
+        <%= image_tag(@review.img.url(:normal))%>
+        <div class="data-disc">
+          <p>La Maquina Camaleon</p>
+          <p>Ecuador</p>
+          <p>Fav Tracks:</p>
+          <ul>
+            <li>Facetas</li>
+            <li>Hoy</li>
+            <li>El amuleto</li>
+          </ul>
+        </div>
+      </div>
+      <div class="title-review">
+        <h1><%= @review.name%></h1>
+        <p>La Maquina Camaleon</p>
+      </div>
+    </div>
+  </div>
+  <div class="content-review">
+    <div class="side-sponsors">
+      <p class="side-author">por Andres Vargas</p>
+      <p class="side-place"><%= @review.place%> <%= @review.date.to_time.strftime('%m.%d.%y')%></p>
+      <ul>
+        <li>Sponsor 1</li>
+        <li>Sponsor 2</li>
+        <li>Sponsor 3</li>
+        <li>Sponsor 4</li>
+      </ul>
+    </div>
+    <div class="review-body">
+      <div class="review-text">
+        <%= @review.body.html_safe%>
+      </div>
+    </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @review.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @review.description %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @review.body %>
-</p>
-
-<p>
-  <strong>Year:</strong>
-  <%= @review.year %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @review.date %>
-</p>
-
-<p>
-  <strong>Place:</strong>
-  <%= @review.place %>
-</p>
-
-<p>
-  <strong>Img:</strong>
-  <%= @review.img %>
-</p>
-
+  </div>
+</div>
 <%= link_to 'Edit', edit_review_path(@review) %> |
 <%= link_to 'Back', reviews_path %>
+<p id="notice"><%= notice %></p>

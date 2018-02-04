@@ -5,7 +5,7 @@ class ReportsController < ApplicationController
   # GET /reports
   # GET /reports.json
   def index
-    @headers = Report.first(2)
+    @headers = Report.where(highlight: "TRUE").take(2)
     @reports = Report.all
   end
 
@@ -71,6 +71,6 @@ class ReportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def report_params
-      params.require(:report).permit(:title, :subtitle, :place, :date, :body, :cover, :imgcover)
+      params.require(:report).permit(:title, :subtitle, :place, :date, :body, :cover, :imgcover, :highlight)
     end
 end

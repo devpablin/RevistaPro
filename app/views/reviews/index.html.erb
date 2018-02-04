@@ -1,43 +1,45 @@
-<p id="notice"><%= notice %></p>
+
 <style media="screen">
   #reviews{
     border: solid 1px black;
   }
 </style>
-<h1>Reviews</h1>
+<div class="reviews-container">
+  <div class="side-categories">
+    <ul>
+      <li>cat 1</li>
+      <li>cat 2</li>
+      <li>cat 3</li>
+    </ul>
+  </div>
+  <div class="index-reviews">
+    <div class="review-card-container">
+      <div class="card-review">
+        <div class="img-review">
+          <%= link_to image_tag(@reviews.first.img.url(:thumb)), review_path(@reviews.first)%>
+          <p><%=@reviews.first.year.to_time.strftime("%Y")%></p>
+        </div>
+        <div class="data-review">
+          <h1><%= @reviews.first.name%></h1>
+          <p>La Maquina Camaleon</p>
+          <p><%=@reviews.first.description%></p>
+        </div>
+      </div>
+      <div class="card-review" id="review-right">
+        <div class="img-review">
+          <%=link_to image_tag(@reviews.last.img.url(:thumb)), review_path(@reviews.last)%>
+          <p><%=@reviews.last.year.to_time.strftime("%Y")%></p>
+        </div>
+        <div class="data-review">
+          <h1><%= @reviews.last.name%></h1>
+          <p>La Maquina Camaleon</p>
+          <p><%=@reviews.last.description%></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Body</th>
-      <th>Year</th>
-      <th>Date</th>
-      <th>Place</th>
-      <th>Img</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @reviews.each do |review| %>
-      <tr>
-        <td><%= review.name %></td>
-        <td><%= review.description %></td>
-        <td><%= review.body %></td>
-        <td><%= review.year %></td>
-        <td><%= review.date %></td>
-        <td><%= review.place %></td>
-        <td><%= review.img %></td>
-        <td><%= link_to 'Show', review %></td>
-        <td><%= link_to 'Edit', edit_review_path(review) %></td>
-        <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+</div>
 
 <%= link_to 'New Review', new_review_path %>
+<p id="notice"><%= notice %></p>

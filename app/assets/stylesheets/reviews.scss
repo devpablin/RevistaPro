@@ -1,3 +1,182 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.reviews-container{
+  display: flex;
+  flex-direction: row;
+  .side-categories{
+    min-width: 20%;
+    ul{
+      list-style-type: none
+
+    }
+    border-right: 2px solid black;
+  }
+  .index-reviews{
+    width: 100%;
+    .review-card-container{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .card-review{
+        display: flex;
+        min-width: 60%;
+        max-width: 60%;
+        margin: 30px;
+        .img-review{
+          min-width: 250px;
+          max-width: 250px;
+          text-align: right;
+          img{
+            width: 100%;
+          }
+        }
+        .data-review{
+          padding: 30px;
+          padding-top: 0;
+          h1{
+            margin-top: 0;
+            font-weight: 800;
+          }
+        }
+      }
+      #review-right{
+        align-self: flex-end;
+      }
+    }
+  }
+}
+.review-container{
+  .disc-container{
+    text-align: left;
+    color: white;
+    height: 450px;
+    background-color: rgb(60, 60, 60);
+    overflow-y: hidden;
+    display: flex;
+    .disc-card{
+      width: 60%;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      margin-top: 50px;
+      .img-review{
+        width: 40%;
+        max-width: 350px;
+        min-width: 300px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        height: 40%;
+        max-height: 350px;
+        min-height: 300px;
+        img{
+          width: 100%;
+
+        }
+        .data-disc{
+          width: 100%;
+          position: absolute;
+          top: 20%;
+          left: 0;
+          opacity: 0;
+          z-index: 10;
+          transform: scale(3);
+          transition: all 0.3s ease 0s;
+          height: auto;
+          p{
+            font-size: 25px;
+            font-style: italic;
+            color: black;
+            line-height: 20px;
+          }
+          ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li{
+              color: rgb(51, 51, 51);
+              text-transform: uppercase;
+              font-size: 20px;
+              padding-top: 15px;
+            }
+          }
+        }
+
+      }
+      .img-review:before,
+      .img-review:after{
+        content: "";
+        width: 250%;
+        height: 200%;
+        background: rgba(227, 227, 227, 0.3);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: skew(45deg) translateX(100%);
+        transition: all 0.6s ease 0s;
+      }
+      .img-review:after{ transform: skew(45deg) translateX(-100%);}
+      .img-review:hover:before,
+      .img-review:hover:after{ transform: skew(45deg) translateX(0px); }
+      .img-review:hover img{
+        opacity: 0.3;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+      }
+      .img-review:hover .data-disc{
+        opacity: 1;
+        transform: scale(1);
+      }
+      .title-review{
+        position: relative;
+        padding-left: 5%;
+        margin-top: -10px;
+        width: 60%;
+        h1{
+          margin: 0;
+          padding-top: 0;
+          font-size: 5em;
+          font-weight: bold;
+        }
+        p{
+          font-size: 20px;
+          font-weight: 100;
+        }
+      }
+
+    }
+
+  }
+  .content-review{
+    display: flex;
+    flex-direction: row;
+    .side-sponsors{
+      .side-author{
+        color: white;
+        padding-top: 15%;
+        text-align: center;
+      }
+      .side-place{
+        color: white;
+        text-align: center;
+      }
+      width: 20%;
+      max-height: 70vh;
+      overflow-y: scroll;
+    }
+    .review-body{
+      width: 80%;
+      .review-text{
+        max-height: 60vh;
+        width: 80%;
+        overflow-y: scroll;
+        margin: auto;
+        margin-top: 30px;
+        padding-top: 20px;
+      }
+    }
+  }
+
+}
