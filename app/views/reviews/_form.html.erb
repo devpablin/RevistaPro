@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :body %>
-    <%= form.text_area :body, id: :review_body %>
+    <%= form.cktext_area :body, id: :review_body, ckeditor: { language: 'es'} %>
   </div>
 
   <div class="field">

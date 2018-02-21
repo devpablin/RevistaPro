@@ -26,7 +26,7 @@
   <% @reports.each do |report| %>
     <div class="card-report">
       <div class="img-card">
-        <%= image_tag(report.imgcover.url(:thumb))%>
+        <%= link_to  image_tag(report.imgcover.url(:thumb)), report_path(report)%>
       </div>
       <div class="text-card">
         <h1><%= report.title %></h1>
