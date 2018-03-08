@@ -5,7 +5,7 @@ class ReportsController < ApplicationController
   # GET /reports
   # GET /reports.json
   def index
-    @headers = Report.where(highlight: "TRUE").take(2)
+    @headers = Report.where(highlight: "TRUE").take(3)
     @reports = Report.all
   end
 

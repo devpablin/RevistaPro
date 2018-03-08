@@ -1,30 +1,159 @@
 // Place all the styles related to the Reports controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+hr{
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid rgb(181, 181, 181);
+  margin: 0 0;
+  padding: 0;
+}
 .highlights-container{
   display: flex;
   flex-direction: row;
-  .highlight{
+  height: 95vh;
+  display: flex;
+  flex-direction: row;
+  .highlight1{
+    background-color: rgb(117, 117, 117);
+
+    height: 100%;
+    width: 55%;
+    overflow: hidden;
+    position: relative;
+    .highlight{
+      min-height: 100%;
+      min-width: 1080px;
+      filter: opacity(60%);
+
+
+    vertical-align: middle;
+
+      /* Set up proportionate scaling */
+      width: 100%;
+      height: auto;
+
+    }
+    .htext{
+
+      top: 55%;
+      color: white;
+      position: absolute;
+      width: 100%;
+      h1{
+        padding-left: 30px;
+        text-transform: uppercase;
+        font-family: 'EuclidFlex Bold';
+        letter-spacing: 4px;
+        font-size: 40px;
+      }
+      p{
+        padding-top: 1em;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-family: 'EuclidFlex Light';
+        font-size: 20px;
+        letter-spacing: 2px;
+        line-height: 1.3em;
+      }
+    }
+  }
+  .subhighlights{
+    background-color: rgb(153, 224, 151);
+    height: 100%;
+    width: 45%;
     display: flex;
     flex-direction: column;
-    width: 50%;
-    align-items: center;
-    a,div,h1,p{
-      width: 80%;
-      max-width: 502px;
-      align-self: center;
-    }
-    .author{
-      text-align: right;
-    }
-    a img{
+    .subh1{
+      background-color: rgb(193, 145, 227);
       width: 100%;
-      max-width: 502px;
-    }
+      height: 45%;
+      overflow: hidden;
+      position: relative;
+      .highlight{
+        min-height: 100%;
+        background-color: rgb(117, 117, 117);
+        filter: opacity(60%);
 
+
+
+      vertical-align: middle;
+
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+
+      }
+      .htext{
+        top: 37%;
+        color: white;
+        position: absolute;
+        width: 100%;
+        h1{
+          padding-left: 30px;
+          text-transform: uppercase;
+          font-family: 'EuclidFlex Bold';
+          letter-spacing: 4px;
+          font-size: 35px;
+        }
+        p{
+          padding-top: 1em;
+          padding-left: 30px;
+          padding-right: 30px;
+          font-family: 'EuclidFlex Light';
+          font-size: 18px;
+          letter-spacing: 2px;
+          line-height: 1.3em;
+        }
+      }
+    }
+    .subh2{
+      background-color: rgb(117, 117, 117);
+      width: 100%;
+      height: 55%;
+      overflow: hidden;
+      position: relative;
+      .highlight{
+        min-height: 100%;
+        filter: opacity(70%);
+
+
+      vertical-align: middle;
+
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+
+      }
+      .htext{
+        top: 40%;
+        color: white;
+        position: absolute;
+        width: 100%;
+        h1{
+          padding-left: 30px;
+          text-transform: uppercase;
+          font-family: 'EuclidFlex Bold';
+          letter-spacing: 4px;
+          font-size: 35px;
+        }
+        p{
+          padding-top: 1em;
+          padding-left: 30px;
+          padding-right: 30px;
+          font-family: 'EuclidFlex Light';
+          font-size: 18px;
+          letter-spacing: 2px;
+          line-height: 1.3em;
+        }
+      }
+    }
   }
 }
 .index-reports{
+  background-image: url('FONDOS-02.png');
+  background-size:contain;
   .card-report{
     display: flex;
     flex-direction: row;
