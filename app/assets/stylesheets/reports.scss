@@ -47,6 +47,14 @@ hr{
         font-family: 'EuclidFlex Bold';
         letter-spacing: 4px;
         font-size: 40px;
+        a{
+          color: white;
+          text-decoration: none;
+        }
+        a:hover{
+          text-decoration: none;
+          color: rgb(229, 230, 232);
+        }
       }
       p{
         padding-top: 1em;
@@ -96,6 +104,14 @@ hr{
           font-family: 'EuclidFlex Bold';
           letter-spacing: 4px;
           font-size: 35px;
+          a{
+            color: white;
+            text-decoration: none;
+          }
+          a:hover{
+            text-decoration: none;
+            color: rgb(229, 230, 232);
+          }
         }
         p{
           padding-top: 1em;
@@ -137,6 +153,14 @@ hr{
           font-family: 'EuclidFlex Bold';
           letter-spacing: 4px;
           font-size: 35px;
+          a{
+            color: white;
+            text-decoration: none;
+          }
+          a:hover{
+            text-decoration: none;
+            color: rgb(229, 230, 232);
+          }
         }
         p{
           padding-top: 1em;
@@ -154,25 +178,45 @@ hr{
 .index-reports{
   background-image: url('FONDOS-02.png');
   background-size:contain;
-  .card-report{
+  .cardrow1{
     display: flex;
     flex-direction: row;
-    padding: 30px;
-    width: 70%;
-    .img-card{
-      width: 40%;
-      overflow: hidden;
-      img{
-        width: 80%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    flex-wrap: wrap;
+    .card-report{
+      display: flex;
+      flex-direction: row;
+      padding: 30px;
+      width: 50%;
+      .img-card{
+        width: 50%;
+        overflow: hidden;
+        img{
+          padding: 20px;
+          width: 100%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      .text-card{
+        width: 50%;
+        h1{
+          font-size: 20px;
+          font-family: 'EuclidFlex Bold';
+          text-transform: uppercase;
+          a{
+            color: black;
+          }
+          a:hover{
+            text-decoration: none;
+            color: rgb(92, 92, 92);
+          }
+        }
       }
     }
-    .text-card h1{
-      margin: 0;
-    }
+
   }
+
 }
 .report-container{
   .cover-container{
@@ -198,6 +242,8 @@ hr{
   .content-report{
     display: flex;
     flex-direction: row;
+    background-image: url('FONDOS-02.png');
+    background-size:contain;
     .side-sponsors{
       .side-author{
         color: white;
@@ -209,18 +255,29 @@ hr{
         text-align: center;
       }
       width: 20%;
-      max-height: 70vh;
+      max-height: 100vh;
       overflow-y: scroll;
     }
     .report-body{
       width: 80%;
-      .report-text{
-        max-height: 60vh;
+      height: 100vh;
+      .subtitletxt{
+        font-family: 'EuclidFlex Bold';
+        font-size: 15px;
+        font-style: italic;
         width: 80%;
-        overflow-y: scroll;
         margin: auto;
         margin-top: 30px;
         padding-top: 20px;
+      }
+      .report-text{
+        max-height: 65vh;
+        width: 80%;
+        overflow-y: scroll;
+        padding-left: 10%;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-left: 2px solid black;
       }
     }
   }

@@ -8,7 +8,7 @@
   <div class="highlight1">
     <%=image_tag(@headers.first.imgcover.url(:normal), class: "highlight")%>
     <div class="htext">
-      <h1><%= @headers.first.title%></h1>
+      <h1><%= link_to @headers.first.title, report_path(@headers.first)%></h1>
       <hr>
       <p><%= @headers.first.subtitle%></p>
     </div>
@@ -18,7 +18,7 @@
     <div class="subh1">
       <%=image_tag(@headers.second.imgcover.url(:normal), class: "highlight")%>
       <div class="htext">
-        <h1><%= @headers.second.title%></h1>
+        <h1><%= link_to @headers.second.title, report_path(@headers.second)%></h1>
         <hr>
         <p><%= @headers.second.subtitle%></p>
       </div>
@@ -26,7 +26,7 @@
     <div class="subh2">
       <%=image_tag(@headers.last.imgcover.url(:normal), class: "highlight")%>
       <div class="htext">
-        <h1><%= @headers.last.title%></h1>
+        <h1><%= link_to @headers.last.title, report_path(@headers.last)%></h1>
         <hr>
         <p><%= @headers.last.subtitle%></p>
       </div>
@@ -34,19 +34,24 @@
   </div>
 </div>
 <div class="index-reports">
-  <% @reports.each do |report| %>
+  <div class="cardrow1">
+    <% @reports.each do |report| %>
+
     <div class="card-report">
       <div class="img-card">
         <%= link_to  image_tag(report.imgcover.url(:thumb)), report_path(report)%>
       </div>
       <div class="text-card">
-        <h1><%= report.title %></h1>
+        <h1><%=link_to report.title, report_path(report) %></h1>
         <p><%= report.subtitle %></p>
         <div><%= report.place %> <%= report.date.to_time.strftime('%m.%d.%Y') %></div>
         <div class="author"><span>por Author</span></div>
       </div>
     </div>
     <% end %>
+
+  </div>
+
 </div>
 <%= link_to "New Report", new_report_path%>
 <p id="notice"><%= notice %></p>
