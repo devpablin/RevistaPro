@@ -32,6 +32,8 @@ gem 'paperclip', git: "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk', '~> 2'
 gem 'figaro'
 gem 'ckeditor'
+gem 'jquery-rails'
+gem "jquery-slick-rails"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

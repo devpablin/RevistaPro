@@ -13,6 +13,7 @@
  font-family: "EuclidFlex Bold";
  src: font-url('EuclidFlex-Bold.otf') format('opentype');
 }
+
 .home-container{
   background-color: #444344;
   background-size: 100% auto;
@@ -37,6 +38,10 @@
  top: 0;
  left: 0;
 }
+.myslide{
+  display: none;
+}
+
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
   img.img-slider {
@@ -72,34 +77,66 @@
   .titulares{
     margin-top: 180px;
     align-self: center;
-    .titulo{
-      font-size: 50px;
-      font-family: "EuclidFlex Bold";
-      padding-left: 0px;
-      letter-spacing: 4px;
-      position: relative;
-      color: white;
+    .tit1{
+      display:none;
+      .titulo{
+        font-size: 50px;
+        font-family: "EuclidFlex Bold";
+        padding-left: 0px;
+        letter-spacing: 4px;
+        position: relative;
+        color: white;
 
-      text-transform: uppercase;
-      z-index: 2;
+        text-transform: uppercase;
+        z-index: 2;
+      }
+      .descripchion{
+        width: 300px;
+        background-color: rgba(5, 5, 5, 0.4);
+        color: white;
+        font-family: 'EuclidFlex Light';
+        font-size: 14px;
+        padding: 10px;
+        position: relative;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        top: -30px;
+        float: right;
+        z-index: 0;
+
+      }
     }
-    .descripchion{
-      width: 300px;
-      background-color: rgba(5, 5, 5, 0.4);
-      color: white;
-      font-family: 'EuclidFlex Light';
-      font-size: 14px;
-      padding: 10px;
-      position: relative;
-      padding-top: 30px;
-      padding-bottom: 20px;
-      top: -30px;
-      float: right;
-      z-index: 0;
+    .act{
+      display: block;
+    }
+  }
+  .dots {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 125px;
+    .dot{
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      margin: 4px 2px;
+      background-color: #e0e0e0;
+      border-radius: 50%;
+      border: 1px solid rgb(89, 89, 89);
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
 
+    .active {
+      background-color: #717171;
     }
   }
 
+}
+.home-content div:last-child{
+  margin-left: auto;
+  padding-right: 30px;
 }
 .home-content .nav-home{
   position: absolute;
@@ -131,4 +168,7 @@
     display: inline-block;
     border: none;
   }
+}
+.activo{
+  display: block
 }

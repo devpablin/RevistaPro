@@ -1,6 +1,11 @@
 <div class="home-container">
   <% if @portadas.count > 0 %>
-    <%=image_tag(@portadas.first.imgcover.url(:normal), class: "img-slider")%>
+  <div class="sliders">
+    <%=image_tag(@portadas.first.imgcover.url(:normal), class: "img-slider myslide activo")%>
+    <%=image_tag(@portadas.second.imgcover.url(:normal), class: "img-slider myslide")%>
+    <%=image_tag(@portadas.last.imgcover.url(:normal), class: "img-slider myslide")%>
+  </div>
+
     <div class="home-content">
       <%= render 'layouts/nav-home' %>
       <div class="side-sponsors">
@@ -16,12 +21,31 @@
           <li>Sponsor 4</li>
         </ul>
       </div>
-        <div class="titulares">
+      <div class="titulares">
+        <div class="tit1 act">
           <h1 class="titulo"><%=@portadas.first.title%></h1>
           <p class="descripchion">
             <%=@portadas.first.subtitle%>
           </p>
         </div>
+        <div class="tit1">
+          <h1 class="titulo"><%=@portadas.second.title%></h1>
+          <p class="descripchion">
+            <%=@portadas.second.subtitle%>
+          </p>
+        </div>
+        <div class="tit1">
+          <h1 class="titulo"><%=@portadas.last.title%></h1>
+          <p class="descripchion">
+            <%=@portadas.last.subtitle%>
+          </p>
+        </div>
+      </div>
+      <div class="dots">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
   </div>
   <% end %>
 
