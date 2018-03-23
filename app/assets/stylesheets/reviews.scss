@@ -1,35 +1,81 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+ font-family: "EuclidFlex Regular";
+ src: font-url('EuclidFlex-Regular.otf') format('opentype');
+}
+@font-face {
+ font-family: "EuclidFlex Light";
+ src: font-url('EuclidFlex-Light.otf') format('opentype');
+}
+@font-face {
+ font-family: "EuclidFlex Bold";
+ src: font-url('EuclidFlex-Bold.otf') format('opentype');
+}
 .reviews-container{
   display: flex;
   flex-direction: row;
+  background-image: url('FONDOS-02.png');
+  background-size:contain;
   .side-categories{
-    min-width: 20%;
+    min-width: 15%;
     ul{
       list-style-type: none
 
     }
-    border-right: 2px solid black;
   }
   .index-reviews{
     width: 100%;
     .review-card-container{
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       width: 100%;
+      flex-wrap: wrap;
       .card-review{
         display: flex;
-        min-width: 60%;
-        max-width: 60%;
-        margin: 30px;
-        .img-review{
-          min-width: 250px;
-          max-width: 250px;
-          text-align: right;
-          img{
-            width: 100%;
+        flex-direction: row;
+        min-width: 50%;
+        max-width: 50%;
+        justify-content: center;
+        margin: 30px 0px;
+        .img-data{
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          p.datecreate{
+            text-align: right;
+            margin-bottom: 0;
           }
+          img{
+            min-width: 200px;
+            max-width: 200px;
+          }
+          h1{
+            font-family: 'EuclidFlex Bold';
+            font-size: 20px;
+            margin-top: 5px;
+            margin-bottom: 0;
+          }
+          p.revyear{
+            font-family: 'EuclidFlex Light';
+            font-size: 14px;
+            margin-top: 0px;
+            margin-bottom: 3px;
+          }
+          p.revartist{
+            font-family: 'EuclidFlex Regular';
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+          }
+          p.revautor{
+            font-family: 'EuclidFlex Light';
+            font-size: 12px;
+            margin-top: 0px;
+            margin-bottom: 3px;
+          }
+
         }
         .data-review{
           padding: 30px;

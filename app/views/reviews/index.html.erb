@@ -15,28 +15,21 @@
   </div>
   <div class="index-reviews">
     <div class="review-card-container">
+      <% @reviews.each do |review| %>
       <div class="card-review">
-        <div class="img-review">
-          <%= link_to image_tag(@reviews.first.img.url(:thumb)), review_path(@reviews.first)%>
-          <p><%=@reviews.first.year.to_time.strftime("%Y")%></p>
-        </div>
-        <div class="data-review">
-          <h1><%= @reviews.first.name%></h1>
-          <p>La Maquina Camaleon</p>
-          <p><%=@reviews.first.description%></p>
-        </div>
-      </div>
-      <div class="card-review" id="review-right">
-        <div class="img-review">
-          <%=link_to image_tag(@reviews.last.img.url(:thumb)), review_path(@reviews.last)%>
-          <p><%=@reviews.last.year.to_time.strftime("%Y")%></p>
-        </div>
-        <div class="data-review">
-          <h1><%= @reviews.last.name%></h1>
-          <p>La Maquina Camaleon</p>
-          <p><%=@reviews.last.description%></p>
+          <div class="img-data">
+            <p class="datecreate"><%=review.created_at.to_time.strftime("%d.%b.%Y")%></p>
+            <%= link_to image_tag(review.img.url(:thumb)), review_path(review)%>
+            <h1><%= review.name%></h1>
+            <p class="revyear">(<%=review.year.to_time.strftime("%Y")%>)</p>
+            <p class="revartist">La Maquina Camaleon</p>
+            <p class="revautor">por: Autor</p>
+          </div>
+        <div class="freq">
+          freq svg
         </div>
       </div>
+      <%end%>
     </div>
   </div>
 
