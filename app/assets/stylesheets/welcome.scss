@@ -14,6 +14,23 @@
  src: font-url('EuclidFlex-Bold.otf') format('opentype');
 }
 
+.construccion{
+  background-color: rgb(130, 58, 115);
+  color: white;
+  text-align: center;
+  height: 110vh;
+  margin-top: -40px;
+  h1{
+    font-family: 'EuclidFlex Bold';
+    font-size: 5em;
+    padding-top: 45vh;
+  }
+  p{
+    font-family: 'EuclidFlex Light';
+    font-size: 2em;
+  }
+}
+
 .home-container{
   background-color: #444344;
   background-size: 100% auto;
