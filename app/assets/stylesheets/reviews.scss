@@ -14,9 +14,7 @@
  src: font-url('EuclidFlex-Bold.otf') format('opentype');
 }
 body{
-  height: 100%;
-  background-image: url('https://s3.amazonaws.com/revista-production/app/FONDOS-02.png');
-  background-size:contain;
+
 }
 .reviews-container{
   display: flex;
@@ -242,8 +240,9 @@ body{
     }
     .review-body{
       width: 90%;
+      padding-bottom: 10%;
       .review-text{
-        max-height: 60vh;
+        max-height: 50vh;
         width: 100%;
         overflow-y: scroll;
         margin: auto;
