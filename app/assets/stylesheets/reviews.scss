@@ -13,6 +13,11 @@
  font-family: "EuclidFlex Bold";
  src: font-url('EuclidFlex-Bold.otf') format('opentype');
 }
+body{
+  height: 100%;
+  background-image: url('https://s3.amazonaws.com/revista-production/app/FONDOS-02.png');
+  background-size:contain;
+}
 .reviews-container{
   display: flex;
   flex-direction: row;
