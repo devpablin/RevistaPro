@@ -3,7 +3,7 @@
     <div class="disc-card">
       <div class="img-review">
         <%= image_tag(@review.img.url(:normal))%>
-        <div class="data-disc">
+        <!--This is a comment. Comments are not displayed in the browser<div class="data-disc">
           <p>La Maquina Camaleon</p>
           <p>Ecuador</p>
           <p>Fav Tracks:</p>
@@ -12,9 +12,9 @@
             <li>Hoy</li>
             <li>El amuleto</li>
           </ul>
-        </div>
+        </div>-->
       </div>
-      <div class="revfreq">freqqq</div>
+      <!--<div class="revfreq">freqqq</div>-->
       <div class="title-review">
         <h1><%= @review.name%></h1>
         <p>La Maquina Camaleon</p>
@@ -25,14 +25,14 @@
     </div>
   </div>
   <div class="content-review">
-    <div class="side-titles">
+    <!--<div class="side-titles">
       <ol>
         <li>Titulo1</li>
         <li>Titulo1</li>
         <li>Titulo1</li>
         <li>Titulo1</li>
       </ol>
-    </div>
+    </div>-->
     <div class="review-body">
       <div class="review-text">
         <%= @review.body.html_safe%>
@@ -41,6 +41,6 @@
 
   </div>
 </div>
-<%= link_to 'Edit', edit_review_path(@review) %> |
+<!--<%= link_to 'Edit', edit_review_path(@review) %> |
 <%= link_to 'Back', reviews_path %>
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>-->

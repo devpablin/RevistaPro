@@ -16,7 +16,7 @@
 .reviews-container{
   display: flex;
   flex-direction: row;
-  background-image: url('FONDOS-02.png');
+  background-image: url('https://s3.amazonaws.com/revista-production/app/FONDOS-02.png');
   background-size:contain;
   .side-categories{
     min-width: 15%;
@@ -93,12 +93,12 @@
   }
 }
 .review-container{
-  background-image: url('FONDOS-02.png');
+  background-image: url('https://s3.amazonaws.com/revista-production/app/FONDOS-02.png');
   background-size:contain;
   .disc-container{
     text-align: left;
     color: black;
-    height: 50vh;
+    height: 300px;
     overflow-y: hidden;
     display: flex;
     .disc-card{
@@ -110,14 +110,14 @@
       margin-top: 40px;
       .img-review{
         width: 40%;
-        max-width: 200px;
-        min-width: 200px;
+        max-width: 250px;
+        min-width: 250px;
         text-align: center;
         position: relative;
         overflow: hidden;
         height: 40%;
-        max-height: 200px;
-        min-height: 200px;
+        max-height: 250px;
+        min-height: 250px;
         img{
           width: 100%;
 
