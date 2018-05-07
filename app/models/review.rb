@@ -15,4 +15,6 @@ class Review < ApplicationRecord
     :path => "reviews/:attachment/:id/:style/:filename",
     :url => "s3_domain_url"
   validates_attachment_content_type :img, :content_type => /\Aimage\/.*\Z/
+  belongs_to :artist
+  
 end

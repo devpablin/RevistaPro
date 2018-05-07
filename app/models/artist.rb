@@ -15,4 +15,6 @@ class Artist < ApplicationRecord
     :path => "artists/:attachment/:id/:style/:filename",
     :url => "s3_domain_url"
   validates_attachment_content_type :img, :content_type => /\Aimage\/.*\Z/
+  has_many :reviews
+  has_many :reports
 end
