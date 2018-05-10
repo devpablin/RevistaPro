@@ -203,7 +203,7 @@ body{
         max-height: 250px;
         min-height: 250px;
         img{
-          height: 100%;
+          width: 100%;
         }
       }
       .title-review{
@@ -311,7 +311,7 @@ body{
             max-height: 200px!important;
             min-height: 200px!important;
             img{
-              height: 100%!important;
+              width: 100%!important;
             }
           }
         }
@@ -353,7 +353,7 @@ body{
       width: 50px!important;
       height: 200px!important;
       img{
-        width: 100%;
+        width: 100%!important;
       }
     }
 }
