@@ -39,10 +39,15 @@
   li:hover{
     border-bottom: solid 1px rgb(121, 121, 121);
   }
+  .icon{
+    display: none;
+  }
 }
+
 .logo{
   border: none;
-  a li{
+  position: relative;
+  li{
     color: white;
     list-style-type: none;
     text-align: center;

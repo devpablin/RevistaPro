@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180221212318) do
+ActiveRecord::Schema.define(version: 20180508213443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,10 @@ ActiveRecord::Schema.define(version: 20180221212318) do
     t.string "logo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "img_file_name"
+    t.string "img_content_type"
+    t.integer "img_file_size"
+    t.datetime "img_updated_at"
   end
 
   create_table "ckeditor_assets", id: :serial, force: :cascade do |t|
@@ -79,13 +83,14 @@ ActiveRecord::Schema.define(version: 20180221212318) do
     t.integer "imgcover_file_size"
     t.datetime "imgcover_updated_at"
     t.boolean "highlight"
+    t.integer "artist_id"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.text "body"
-    t.date "year"
+    t.string "year"
     t.datetime "date"
     t.string "place"
     t.datetime "created_at", null: false
@@ -94,6 +99,12 @@ ActiveRecord::Schema.define(version: 20180221212318) do
     t.string "img_content_type"
     t.integer "img_file_size"
     t.datetime "img_updated_at"
+    t.integer "artist_id"
+    t.integer "category_id"
+    t.integer "author_id"
+    t.string "fav1"
+    t.string "fav2"
+    t.string "fav3"
   end
 
   create_table "sponsors", force: :cascade do |t|

@@ -21,9 +21,9 @@
             <p class="datecreate"><%=review.created_at.to_time.strftime("%d.%b.%Y")%></p>
             <%= link_to image_tag(review.img.url(:thumb)), review_path(review)%>
             <h1><%= review.name%></h1>
-            <p class="revyear">(<%=review.year.to_time.strftime("%Y")%>)</p>
-            <p class="revartist">La Maquina Camaleon</p>
-            <p class="revautor">por: Autor</p>
+            <p class="revyear">(<%=review.year%>)</p>
+            <p class="revartist"><%= review.artist.name%></p>
+            <p class="revautor">por: <%= review.author.name%></p>
           </div>
         <!--<div class="freq">
           freq svg

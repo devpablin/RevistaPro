@@ -13,6 +13,7 @@
  font-family: "EuclidFlex Bold";
  src: font-url('EuclidFlex-Bold.otf') format('opentype');
 }
+
 body{
   background-image: url('https://s3.amazonaws.com/revista-production/app/FONDOS-02.png');
   background-size:contain;
@@ -112,49 +113,54 @@ body{
       flex-direction: row;
       height: 100%;
       margin-top: 40px;
-      .img-review{
-        width: 40%;
-        max-width: 250px;
-        min-width: 250px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        height: 40%;
-        max-height: 250px;
-        min-height: 250px;
-        img{
-          width: 100%;
+      .img-rr{
+        display: flex;
+        flex-direction: row;
+        .img-review{
+          width: 40%;
+          max-width: 250px;
+          min-width: 250px;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+          height: 40%;
+          max-height: 250px;
+          min-height: 250px;
+          img{
+            width: 100%;
 
-        }
-        .data-disc{
-          width: 100%;
-          position: absolute;
-          top: 10%;
-          left: 0;
-          opacity: 0;
-          z-index: 10;
-          transform: scale(3);
-          transition: all 0.3s ease 0s;
-          height: auto;
-          p{
-            font-size: 13px;
-            font-style: italic;
-            color: black;
-            line-height: 15px;
           }
-          ul{
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            li{
-              color: rgb(51, 51, 51);
-              text-transform: uppercase;
-              font-size: 13px;
-              padding-top: 7px;
+          .data-disc{
+            width: 100%;
+            position: absolute;
+            top: 10%;
+            left: 0;
+            opacity: 0;
+            z-index: 10;
+            transform: scale(3);
+            transition: all 0.3s ease 0s;
+            height: auto;
+            p{
+              padding-top: 10px;
+              font-size: 20px;
+              font-style: italic;
+              color: black;
+              line-height: 15px;
+            }
+            ul{
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              li{
+                color: rgb(51, 51, 51);
+                text-transform: uppercase;
+                font-size: 20px;
+                padding-top: 7px;
+              }
             }
           }
-        }
 
+        }
       }
       .img-review:before,
       .img-review:after{
@@ -181,8 +187,13 @@ body{
         transform: scale(1);
       }
       .revfreq{
-        width: 60px;
-        height: 200px;
+        max-width: 60px;
+        min-width: 60px;
+        max-height: 250px;
+        min-height: 250px;
+        img{
+          height: 100%;
+        }
       }
       .title-review{
         height: 200px;
@@ -236,20 +247,70 @@ body{
     .side-titles{
       min-width: 260px;
       max-width: 260px;
-      max-height: 70vh;
+      max-height: 50vh;
       overflow-y: scroll;
     }
     .review-body{
       width: 90%;
       padding-bottom: 10%;
       .review-text{
+        border-left: 2px solid;
         max-height: 50vh;
         width: 100%;
         overflow-y: scroll;
         margin: auto;
+        margin-left: 60px;
         padding-left: 5%;
       }
     }
   }
 
+}
+@media only screen and (max-width:725px) {
+    .disc-container{
+      height: 450px!important;
+      .disc-card{
+        width: 100%;
+        flex-direction: column!important;
+        .img-rr{
+          margin: auto;
+
+          .img-review{
+            max-width: 200px!important;
+            min-width: 200px!important;
+            max-height: 200px!important;
+            min-height: 200px!important;
+          }
+          .revfreq{
+            max-width: 60px!important;
+            min-width: 60px!important;
+            max-height: 200px!important;
+            min-height: 200px!important;
+            img{
+              height: 100%!important;
+            }
+          }
+        }
+        .title-review{
+          margin: auto;
+          justify-content: flex-start!important;
+          height: 170px!important;
+          .artist-name{
+            font-size: 18px!important;
+            margin: 0 auto!important;
+          }
+          align-items: center!important;
+          padding-left: 0!important;
+        }
+      }
+    }
+    .side-titles{
+      min-width: 0px!important;
+    }
+    .review-text{
+      max-height: none!important;
+      border-left: none!important;
+      margin-left: 0!important;
+      padding-left: 0!important;
+    }
 }

@@ -70,6 +70,6 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:name, :description, :body, :year, :date, :place, :img)
+      params.require(:review).permit(:name, :description, :body, :year, :date, :place, :img, :artist_id, :category_id, :author_id, :fav1, :fav2, :fav3)
     end
 end

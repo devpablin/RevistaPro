@@ -1,26 +1,28 @@
 <div class="review-container">
   <div class="disc-container">
     <div class="disc-card">
-      <div class="img-review">
-        <%= image_tag(@review.img.url(:normal))%>
-        <!--This is a comment. Comments are not displayed in the browser<div class="data-disc">
-          <p>La Maquina Camaleon</p>
-          <p>Ecuador</p>
-          <p>Fav Tracks:</p>
-          <ul>
-            <li>Facetas</li>
-            <li>Hoy</li>
-            <li>El amuleto</li>
-          </ul>
-        </div>-->
+      <div class="img-rr">
+        <div class="img-review">
+          <%= image_tag(@review.img.url(:normal))%>
+          <div class="data-disc">
+            <p><%= @review.artist.name%></p>
+            <p><%= @review.place %></p>
+            <p>Fav Tracks:</p>
+            <ul>
+              <li><%= @review.fav1%></li>
+              <li><%= @review.fav2%></li>
+              <li><%= @review.fav3%></li>
+            </ul>
+          </div>
+        </div>
+        <div class="revfreq"><%= image_tag(@review.category.img.url(:normal))%></div>
       </div>
-      <!--<div class="revfreq">freqqq</div>-->
       <div class="title-review">
         <h1><%= @review.name%></h1>
-        <p>La Maquina Camaleon</p>
-        <p class="topyear">(1968)</p>
-        <p class="autorrev">por: Autor</p>
-        <p class="daterev">09.02.2018</p>
+        <p class="artist-name"><%= @review.artist.name%></p>
+        <p class="topyear">(<%=@review.year%>)</p>
+        <p class="autorrev">por: <%= @review.author.name%></p>
+        <p class="daterev"><%=@review.date.to_time.strftime("%d.%b.%Y")%></p>
       </div>
     </div>
   </div>
