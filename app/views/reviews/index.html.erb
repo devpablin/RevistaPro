@@ -7,11 +7,15 @@
 </style>
 <div class="reviews-container">
   <div class="side-categories">
-    <ul>
-      <li>cat 1</li>
-      <li>cat 2</li>
-      <li>cat 3</li>
-    </ul>
+    <div class="categorie-list">
+      9500oct
+    </div>
+    <div class="categorie-list">
+      5400oct
+    </div>
+    <div class="categorie-list">
+      4200oct
+    </div>
   </div>
   <div class="index-reviews">
     <div class="review-card-container">
@@ -25,9 +29,7 @@
             <p class="revartist"><%= review.artist.name%></p>
             <p class="revautor">por: <%= review.author.name%></p>
           </div>
-        <!--<div class="freq">
-          freq svg
-        </div>-->
+        <div class="revfreqqq"><%= image_tag(review.category.img.url(:normal))%></div>
       </div>
       <%end%>
     </div>
@@ -35,5 +37,5 @@
 
 </div>
 
-<%= link_to 'New Review', new_review_path %>
+<!--<%= link_to 'New Review', new_review_path %>-->
 <p id="notice"><%= notice %></p>

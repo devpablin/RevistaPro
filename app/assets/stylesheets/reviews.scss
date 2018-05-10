@@ -25,9 +25,10 @@ body{
   background-size:contain;
   .side-categories{
     min-width: 15%;
-    ul{
-      list-style-type: none
-
+    display: flex;
+    flex-direction: column;
+    .categorie-list{
+      width: 100%;
     }
   }
   .index-reviews{
@@ -81,6 +82,16 @@ body{
             margin-bottom: 3px;
           }
 
+        }
+        .revfreqqq{
+          margin-top: 18px;
+          max-width: 50px;
+          min-width: 50px;
+          max-height: 200px;
+          min-height: 200px;
+          img{
+            height: 100%;
+          }
         }
         .data-review{
           padding: 30px;
@@ -267,6 +278,19 @@ body{
 
 }
 @media only screen and (max-width:725px) {
+  .reviews-container{
+    flex-direction: column!important;
+    .side-categories{
+      flex-direction: row;
+    }
+  }
+    .review-card-container{
+      flex-direction: column!important;
+      .card-review{
+        min-width: 100%!important;
+        max-width: 100%!important;
+      }
+    }
     .disc-container{
       height: 450px!important;
       .disc-card{
@@ -298,6 +322,7 @@ body{
           .artist-name{
             font-size: 18px!important;
             margin: 0 auto!important;
+            text-align: center;
           }
           align-items: center!important;
           padding-left: 0!important;
@@ -307,8 +332,11 @@ body{
     .side-titles{
       min-width: 0px!important;
     }
+    .review-body{
+      height: 410px!important;
+    }
     .review-text{
-      max-height: none!important;
+      max-height: 90%!important;
       border-left: none!important;
       margin-left: 0!important;
       padding-left: 0!important;
