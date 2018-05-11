@@ -44,7 +44,7 @@
       <div class="text-card">
         <h1><%=link_to report.title, report_path(report) %></h1>
         <p><%= report.subtitle %></p>
-        <div><%= report.place %> <%= report.date.to_time.strftime('%m.%d.%Y') %></div>
+        <div class="lugarcito"><%= report.place %> <%= report.date.to_time.strftime('%m.%d.%Y') %></div>
         <div class="author"><span>por Author</span></div>
       </div>
     </div>
