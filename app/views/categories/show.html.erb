@@ -1,10 +1,43 @@
-<p id="notice"><%= notice %></p>
+<style media="screen">
+  #reviews{
+    border-bottom: solid 1px rgb(92, 99, 97);
+    border-bottom-width: 1px;
+  }
+</style>
+<div class="reviews-container">
+  <div class="side-categories">
+    <div class="categorie-list">
+      <%=link_to "6500at", category_path(@category6500)%>
+    </div>
+    <div class="categorie-list">
+      <%=link_to "5400at", category_path(@category5400)%>
+    </div>
+    <div class="categorie-list">
+      <%=link_to "4200at", category_path(@category4200)%>
+    </div>
+  </div>
+  <div class="index-reviews">
+    <div class="review-card-container">
+      <% @reviews.each do |review| %>
+      <div class="card-review">
+          <div class="img-data">
+            <p class="datecreate"><%=review.created_at.to_time.strftime("%d.%b.%Y")%></p>
+            <%= link_to image_tag(review.img.url(:thumb)), review_path(review)%>
+            <h1><%= review.name%></h1>
+            <p class="revyear">(<%=review.year%>)</p>
+            <p class="revartist"><%= review.artist.name%></p>
+            <p class="revautor">por: <%= review.author.name%></p>
+          </div>
+        <div class="revfreqqq"><%= image_tag(review.category.img.url(:normal))%></div>
+      </div>
+      <%end%>
+    </div>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
-<%= image_tag(@category.img.url(:normal))%>
+</div>
+
+<!--<%= link_to 'New Review', new_review_path %>-->
+<p id="notice"><%= notice %></p>
 
 
 <%= link_to 'Edit', edit_category_path(@category) %> |

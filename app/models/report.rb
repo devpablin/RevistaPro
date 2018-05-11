@@ -16,4 +16,5 @@ class Report < ApplicationRecord
     :url => "s3_domain_url"
   validates_attachment_content_type :imgcover, :content_type => /\Aimage\/.*\Z/
   belongs_to :artist
+  belongs_to :author
 end

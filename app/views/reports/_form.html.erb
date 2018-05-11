@@ -20,7 +20,14 @@
     <%= form.label :subtitle %>
     <%= form.text_field :subtitle, id: :report_subtitle %>
   </div>
-
+  <div class="field">
+    <%= form.label :artist %>
+    <%= form.select( :artist_id, Artist.all.collect {|p| [ p.name, p.id ] } )%>
+  </div>
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.select( :author_id, Author.all.collect {|p| [ p.name, p.id ] } )%>
+  </div>
   <div class="field">
         <%= form.label :imgcover %>
         <%= form.file_field :imgcover %>

@@ -6,6 +6,12 @@ class ReviewsController < ApplicationController
   # GET /reviews.json
   def index
     @reviews = Review.all
+    @category6500id = Category.where(name: '6500at').first.id
+    @category5400id = Category.where(name: '5400at').first.id
+    @category4200id = Category.where(name: '4200at').first.id
+    @category6500 = Category.find(@category6500id)
+    @category5400 = Category.find(@category5400id)
+    @category4200 = Category.find(@category4200id)
   end
 
   # GET /reviews/1

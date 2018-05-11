@@ -5,7 +5,7 @@
   </div>
   <div class="content-report">
     <div class="side-sponsors">
-      <p class="side-author">por Andres Vargas</p>
+      <p class="side-author">por <%= @report.author.name %></p>
       <p class="side-place"><%= @report.place%> <%= @report.date.to_time.strftime('%m.%d.%y')%></p>
       <ul>
         <li>Sponsor 1</li>
