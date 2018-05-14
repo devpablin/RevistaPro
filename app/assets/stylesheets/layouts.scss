@@ -17,6 +17,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow-y: hidden;
+  max-height: 60px;
   ul{
     padding-left: 0;
     margin: auto;
@@ -46,6 +48,12 @@
 .logo{
   border: none;
   position: relative;
+  width: 150px;
+  padding-top: 0;
+  img{
+    margin-top: -15%;
+    width: 100%;
+  }
   li{
     color: white;
     list-style-type: none;
@@ -60,9 +68,13 @@ hr{
 
 @media only screen and (max-width:725px){
   .nav-rest{
+    max-height: 120px!important;
     .logo{
-      font-size: 18px;
-      padding-top: 5px;
+      width: 110px!important;
+      img{
+        margin-top: 0!important;
+
+      }
     }
     ul{
       display: flex;
