@@ -1,10 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @artist.name %>
-</p>
+<div class="artist-container">
+  <div class="main-artist-view">
+    <%= image_tag(@artist.img.url(:normal), class: "main-img-artist") %>
+  </div>
+  <div class="alt-artist-view">
+    <div class="artist-reviews">
 
+    </div>
+    <div class="artist-news">
+
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>
