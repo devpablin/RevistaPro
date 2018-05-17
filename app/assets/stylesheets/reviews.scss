@@ -194,14 +194,14 @@ body{
       .img-review:after{ transform: skew(45deg) translateX(-100%);}
       .img-review:hover:before,
       .img-review:hover:after{ transform: skew(45deg) translateX(0px); }
-      .img-review:active:before,
-      .img-review:active:after{ transform: skew(45deg) translateX(0px); }
+      .img-review:focus:before,
+      .img-review:focus:after{ transform: skew(45deg) translateX(0px); }
       .img-review:hover img{
         opacity: 0.3;
         -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
         filter: grayscale(100%);
       }
-      .img-review:active img{
+      .img-review:focus img{
         opacity: 0.3;
         -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
         filter: grayscale(100%);
@@ -211,7 +211,7 @@ body{
         transform: scale(1);
 
       }
-      .img-review:active .data-disc{
+      .img-review:focus .data-disc{
         opacity: 1;
         transform: scale(1);
       }
