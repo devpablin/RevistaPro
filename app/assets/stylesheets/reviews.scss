@@ -13,6 +13,10 @@
  font-family: "EuclidFlex Bold";
  src: font-url('EuclidFlex-Bold.otf') format('opentype');
 }
+.hover {
+-webkit-user-select: none;
+-webkit-touch-callout: none;
+}
 
 body{
   //background-image: url('https://s3.amazonaws.com/revista-production/app/FONDOS-02.png');
@@ -179,42 +183,20 @@ body{
 
         }
       }
-      .img-review:before,
-      .img-review:after{
-        content: "";
-        width: 250%;
-        height: 200%;
-        background: rgba(227, 227, 227, 0.3);
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: skew(45deg) translateX(100%);
-        transition: all 0.6s ease 0s;
-      }
-      .img-review:after{ transform: skew(45deg) translateX(-100%);}
-      .img-review:hover:before,
-      .img-review:hover:after{ transform: skew(45deg) translateX(0px); }
-      .img-review:focus:before,
-      .img-review:focus:after{ transform: skew(45deg) translateX(0px); }
-      .img-review:hover img{
-        opacity: 0.3;
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%);
-      }
-      .img-review:focus img{
-        opacity: 0.3;
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%);
-      }
-      .img-review:hover .data-disc{
-        opacity: 1;
-        transform: scale(1);
 
+
+      .img-review:hover img,
+      .img-review.hover_effect img{
+        opacity: 0.3;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
       }
-      .img-review:focus .data-disc{
+      .img-review:hover .data-disc,
+      .img-review.hover_effect .data-disc{
         opacity: 1;
         transform: scale(1);
       }
+
       .revfreq{
         max-width: 84.68px;
         min-width: 84.68px;
