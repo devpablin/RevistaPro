@@ -1,6 +1,24 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.fa{
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin: auto;
+}
+.fa:hover {
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+}
+.social-links{
+    display: flex;
+    padding: 0 30px 0 15px;
+}
 @font-face {
  font-family: "EuclidFlex Regular";
  src: font-url('EuclidFlex-Regular.otf') format('opentype');
@@ -372,6 +390,14 @@ body{
           font-size: 15px!important;
           padding-top: 3px!important;
         }
+      }
+    }
+    .content-review{
+      flex-direction: column!important;
+      .side-titles{
+        max-width: 100%!important;
+        margin-top: -20px!important;
+        margin-bottom: 30px!important;
       }
     }
 }
