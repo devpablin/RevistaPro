@@ -14,25 +14,27 @@
     </div>
 
   </div>
-  <div class="subhighlights">
-    <div class="subh1">
-      <%=image_tag(@headers.second.imgcover.url(:normal), class: "highlight")%>
-      <div class="htext">
-        <h1><%= link_to @headers.second.title, report_path(@headers.second)%></h1>
-        <hr>
-        <p><%= @headers.second.subtitle%></p>
+  <%if @headers.count > 1%>
+    <div class="subhighlights">
+      <div class="subh1">
+        <%=image_tag(@headers.second.imgcover.url(:normal), class: "highlight")%>
+        <div class="htext">
+          <h1><%= link_to @headers.second.title, report_path(@headers.second)%></h1>
+          <hr>
+          <p><%= @headers.second.subtitle%></p>
+        </div>
       </div>
-    </div>
-    <div class="subh2">
-      <%=image_tag(@headers.last.imgcover.url(:normal), class: "highlight")%>
-      <div class="htext">
-        <h1><%= link_to @headers.last.title, report_path(@headers.last)%></h1>
-        <hr>
-        <p><%= @headers.last.subtitle%></p>
+      <div class="subh2">
+        <%=image_tag(@headers.last.imgcover.url(:normal), class: "highlight")%>
+        <div class="htext">
+          <h1><%= link_to @headers.last.title, report_path(@headers.last)%></h1>
+          <hr>
+          <p><%= @headers.last.subtitle%></p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>
 <div class="index-reports">
   <div class="cardrow1">
     <% @reports.each do |report| %>
@@ -45,7 +47,7 @@
         <h1><%=link_to report.title, report_path(report) %></h1>
         <p><%= report.subtitle %></p>
         <div class="lugarcito"><%= report.place %> <%= report.date.to_time.strftime('%m.%d.%Y') %></div>
-        <div class="author"><span>por Author</span></div>
+        <div class="author"><span>por <%= report.author.name %></span></div>
       </div>
     </div>
     <% end %>
@@ -53,5 +55,5 @@
   </div>
 
 </div>
-<%= link_to "New Report", new_report_path%>
+<!--<%= link_to "New Report", new_report_path%>-->
 <p id="notice"><%= notice %></p>
