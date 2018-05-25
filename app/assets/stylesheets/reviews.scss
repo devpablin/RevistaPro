@@ -42,6 +42,7 @@ body{
   background-size:contain;
 }
 .reviews-container{
+  padding-top: 59px;
   display: flex;
   flex-direction: row;
   //background-image: url('https://s3.amazonaws.com/revista-production/app/FONDOS-02.png');
@@ -136,6 +137,7 @@ body{
   //background-image: url('https://s3.amazonaws.com/revista-production/app/FONDOS-02.png');
   background-color: #f2f4f9;
   background-size:contain;
+  padding-top: 59px;
   .disc-container{
     text-align: left;
     color: black;
@@ -270,6 +272,7 @@ body{
 
   }
   .content-review{
+
     display: flex;
     flex-direction: row;
     width: 70%;
