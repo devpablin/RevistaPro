@@ -1,18 +1,42 @@
-<p id="notice"><%= notice %></p>
-
 <div class="artist-container">
   <div class="main-artist-view">
     <%= image_tag(@artist.img.url(:normal), class: "main-img-artist") %>
+    <h1 class="artist-main-name"><%= @artist.name %></h1>
   </div>
   <div class="alt-artist-view">
+
     <div class="artist-reviews">
+      <h1>Reviews</h1>
+      <%=link_to review_path(@review) do%>
+        <div class="reviews-card">
+          <div class="rev-img">
+            <%= image_tag(@review.img.url(:thumb))%>
+          </div>
+
+          <div class="data-rev-card">
+            <p class="rev-title"><%= @review.name %></p>
+            <p class="year-rev"><%= @review.year %></p>
+          </div>
+        </div>
+      <%end%>
 
     </div>
     <div class="artist-news">
-
+      <h1>Noticias</h1>
+      <%= link_to report_path(@report) do%>
+        <div class="report-card">
+          <div class="rep-img">
+            <%= image_tag(@report.imgcover.url(:normal), class: "img-reep")%>
+          </div>
+          <div class="data-rep-card">
+            <p class="rep-title"><%= @report.title %></p>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
 
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
+<!--<%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>
+<p id="notice"><%= notice %></p>-->

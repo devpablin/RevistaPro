@@ -11,6 +11,8 @@ class ArtistsController < ApplicationController
   # GET /artists/1
   # GET /artists/1.json
   def show
+    @report = @artist.reports.first
+    @review = @artist.reviews.first
   end
 
   # GET /artists/new
