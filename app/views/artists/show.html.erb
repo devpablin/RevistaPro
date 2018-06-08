@@ -1,5 +1,10 @@
 <div class="artist-container">
   <div class="main-artist-view">
+    <div class="social-links-ver">
+      <a href="https://www.facebook.com/altostonosec/" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="https://www.instagram.com/altostonos/" class="fa fa-instagram"></a>
+    </div>
     <%= image_tag(@artist.img.url(:normal), class: "main-img-artist") %>
     <h1 class="artist-main-name"><%= @artist.name %></h1>
   </div>
@@ -7,22 +12,25 @@
 
     <div class="artist-reviews">
       <h1>Reviews</h1>
-      <%=link_to review_path(@review) do%>
-        <div class="reviews-card">
-          <div class="rev-img">
-            <%= image_tag(@review.img.url(:thumb))%>
-          </div>
+      <% if @refiew %>
+        <%=link_to review_path(@review) do%>
+          <div class="reviews-card">
+            <div class="rev-img">
+              <%= image_tag(@review.img.url(:thumb))%>
+            </div>
 
-          <div class="data-rev-card">
-            <p class="rev-title"><%= @review.name %></p>
-            <p class="year-rev"><%= @review.year %></p>
+            <div class="data-rev-card">
+              <p class="rev-title"><%= @review.name %></p>
+              <p class="year-rev"><%= @review.year %></p>
+            </div>
           </div>
-        </div>
+        <%end%>
       <%end%>
 
     </div>
     <div class="artist-news">
       <h1>Noticias</h1>
+      <%if @report%>
       <%= link_to report_path(@report) do%>
         <div class="report-card">
           <div class="rep-img">
@@ -32,6 +40,7 @@
             <p class="rep-title"><%= @report.title %></p>
           </div>
         </div>
+      <% end %>
       <% end %>
     </div>
   </div>

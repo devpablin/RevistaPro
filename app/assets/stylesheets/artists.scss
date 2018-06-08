@@ -1,6 +1,49 @@
 // Place all the styles related to the Artists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.search-win{
+  padding-top: 59px;
+  .search-box{
+    margin: auto;
+    width: 50%;
+    padding-top: 20vh;
+  }
+  #myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  }
+
+  #myUL {
+      /* Remove default list styling */
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      max-height: 200px;
+      overflow-y: scroll;
+  }
+
+  #myUL li a {
+      border: 1px solid #ddd; /* Add a border to all links */
+      margin-top: -1px; /* Prevent double borders */
+      background-color: #f6f6f6; /* Grey background color */
+      padding: 12px; /* Add some padding */
+      text-decoration: none; /* Remove default text underline */
+      font-size: 18px; /* Increase the font-size */
+      color: black; /* Add a black text color */
+      display: block; /* Make it into a block element to fill the whole list */
+  }
+
+  #myUL li a:hover:not(.header) {
+      background-color: #eee; /* Add a hover effect to all links, except for headers */
+  }
+}
+
 .artist-container{
   padding-top: 59px;
   display: flex;
@@ -9,6 +52,12 @@
     width: 60%;
     height: 93vh;
     background-color: rgb(117, 117, 117);
+    .social-links-ver{
+      display: flex;
+      flex-direction: column;
+      position:absolute;
+      z-index: 10;
+    }
     .main-img-artist{
       height: 100%;
       width: 100%;
