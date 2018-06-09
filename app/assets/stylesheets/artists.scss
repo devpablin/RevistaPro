@@ -40,6 +40,13 @@
   }
 
 }
+.social-links-ver{
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  top: 15%;
+  z-index: 10;
+}
 
 .artist-container{
   padding-top: 59px;
@@ -49,12 +56,6 @@
     width: 60%;
     height: 93vh;
     background-color: rgb(117, 117, 117);
-    .social-links-ver{
-      display: flex;
-      flex-direction: column;
-      position:absolute;
-      z-index: 10;
-    }
     .main-img-artist{
       height: 100%;
       width: 100%;
@@ -197,5 +198,14 @@
     .alt-artist-view{
       width: 100%;
     }
+  }
+  .social-links-ver{
+    display: flex;
+    flex-direction: row;
+    position:absolute;
+    top: 59px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
   }
 }

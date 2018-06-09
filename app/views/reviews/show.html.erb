@@ -27,10 +27,10 @@
         <p class="daterev"><%=@review.date.to_time.strftime("%d.%b.%Y")%></p>
       </div>
     </div>
+    <%= render '/layouts/social-links'%>
   </div>
   <div class="content-review">
     <div class="side-titles">
-      <%= render '/layouts/social-links'%>
     </div>
     <div class="review-body">
       <div class="review-text">
