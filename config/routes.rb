@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   # resources :events
-  root 'welcome#building'
+  root 'welcome#index'
   resources :artists
   # resources :videos
   resources :reviews

@@ -1,6 +1,20 @@
-var slideIndex = 1;
-showSlides(slideIndex);
 
+
+/* function carousel(slideIndex) {
+    console.log(slideIndex);
+    var i;
+    var x = document.getElementsByClassName("myslide");
+    console.log(x);
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel(slideIndex), 2000); // Change image every 2 seconds
+}
+/*var i;
+*/
 // Next/previous controls
 
 
@@ -10,7 +24,6 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
   var slides = document.getElementsByClassName("myslide");
   var titles = document.getElementsByClassName("tit1");
   var dots = document.getElementsByClassName("dot");
@@ -30,3 +43,14 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
  // Change image every 2 seconds
 }
+/*
+var nn=1;
+while (true) {
+  console.log(nn)
+  showSlides(slideIndex = nn);
+  nn++;
+  if (nn == 4) {
+    nn = 1;
+  }
+}
+*/
