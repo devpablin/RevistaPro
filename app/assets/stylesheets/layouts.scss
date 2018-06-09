@@ -93,4 +93,16 @@ hr{
 
     }
   }
+  .home-content{
+    overflow: hidden;
+    div:last-child{
+      padding-right: 0!important;
+    }
+    .dots{
+      padding-right: 0!important;
+    }
+    .titulo{
+      font-size: 5vh!important;
+    }
+  }
 }
