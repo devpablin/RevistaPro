@@ -257,7 +257,6 @@ hr{
     .report-body{
       width: 100%;
       margin: auto;
-      height: 100vh;
       .side-author{
         font-family: 'EuclidFlex Regular';
         margin-top: 30px;
@@ -267,6 +266,8 @@ hr{
         width: 80%;
         margin: auto;
         font-size: 15px;
+        padding-left: 6.5%;
+        padding-right: 6.5%;
       }
       .side-place{
         font-size: 15px;
@@ -276,6 +277,8 @@ hr{
         width: 80%;
         margin: auto;
         margin-bottom: 0;
+        padding-left: 6.5%;
+        padding-right: 6.5%;
       }
       .subtitletxt{
         font-family: 'EuclidFlex Bold';
@@ -285,11 +288,14 @@ hr{
         margin: auto;
         margin-top: 10px;
         padding-top: 5px;
+        padding-left: 6.5%;
+        padding-right: 6.5%;
       }
       .report-text{
-        width: 100%;
+        width: 80%;
+        margin: auto;
         overflow-x: scroll;
-        padding: 0 10%;
+        padding: 0 6.5%;
         margin-top: 30px;
         padding-top: 20px;
       }
