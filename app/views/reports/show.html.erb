@@ -5,17 +5,18 @@
     <h1 class="title-report"><%= @report.title%></h1>
   </div>
   <div class="content-report">
-    <div class="side-sponsors">
-      <p class="side-author">por <%= @report.author.name %></p>
-      <p class="side-place"><%= @report.place%> <%= @report.date.to_time.strftime('%m.%d.%y')%></p>
-      <!--<ul>
+    <!--<div class="side-sponsors">
+      <ul>
         <li>Sponsor 1</li>
         <li>Sponsor 2</li>
         <li>Sponsor 3</li>
         <li>Sponsor 4</li>
-      </ul>-->
-    </div>
+      </ul>
+    </div>-->
     <div class="report-body">
+      <p class="side-author">por <%= @report.author.name %></p>
+      <p class="side-place"><%= @report.place%>
+        <br> <%= @report.date.to_time.strftime('%m.%d.%y')%></p>
       <div class="subtitletxt">
         "<%= @report.subtitle %>"
       </div>

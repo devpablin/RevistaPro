@@ -186,7 +186,6 @@ hr{
   }
 }
 .index-reports{
-  background-image: url('https://s3.amazonaws.com/revista-production/app/FONDOS-02.png');
   background-size:contain;
   .cardrow1{
     display: flex;
@@ -246,7 +245,7 @@ hr{
       font-family: 'EuclidFlex Bold';
       text-transform: uppercase;
       font-weight: bold;
-      width: 60%;
+      width: 70%;
     }
     img{
       width: 100%;
@@ -254,44 +253,45 @@ hr{
     }
   }
   .content-report{
-    display: flex;
-    flex-direction: row;
-    background-image: url('FONDOS-02.png');
     background-size:contain;
-    .side-sponsors{
+    .report-body{
+      width: 100%;
+      margin: auto;
+      height: 100vh;
       .side-author{
-        color: white;
-        padding-top: 15%;
-        text-align: center;
+        font-family: 'EuclidFlex Regular';
+        margin-top: 30px;
+        padding-top: 50px;
+        color: black;
+        text-align: left;
+        width: 80%;
+        margin: auto;
+        font-size: 15px;
       }
       .side-place{
-        color: white;
-        text-align: center;
+        font-size: 15px;
+        font-family: 'EuclidFlex Light';
+        color: black;
+        text-align: left;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 0;
       }
-      width: 20%;
-      max-height: 100vh;
-      overflow-y: scroll;
-    }
-    .report-body{
-      width: 80%;
-      height: 100vh;
       .subtitletxt{
         font-family: 'EuclidFlex Bold';
         font-size: 15px;
         font-style: italic;
         width: 80%;
         margin: auto;
-        margin-top: 30px;
-        padding-top: 20px;
+        margin-top: 10px;
+        padding-top: 5px;
       }
       .report-text{
-        max-height: 65vh;
-        width: 80%;
-        overflow-y: scroll;
-        padding-left: 10%;
+        width: 100%;
+        overflow-x: scroll;
+        padding: 0 10%;
         margin-top: 30px;
         padding-top: 20px;
-        border-left: 2px solid black;
       }
     }
   }
