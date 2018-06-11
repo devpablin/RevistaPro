@@ -3,7 +3,8 @@
 </div>
 <script type="text/javascript">
   let portada = document.getElementsByClassName("cover-magazzine")[0];
-  setTimeout(()=>{portada.style.opacity = '0'},5000);
+  setTimeout(()=>{portada.style.opacity = '0';
+                  portada.style.display = 'none'},5000);
 </script>
 <div class="home-container">
   <% if @portadas.count > 0 %>
