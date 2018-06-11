@@ -17,6 +17,22 @@
 // = require jquery.slick
 // = require bootstrap-sprockets
 // = require_tree .
+
+$(window).load(function(){
+   // PAGE IS FULLY LOADED
+   // FADE OUT YOUR OVERLAYING DIV
+   let portada = document.getElementsByClassName("cover-magazzine")[0];
+   let home = document.getElementsByClassName("home-container")[0];
+   setTimeout(()=>{
+     portada.style.opacity = '0';
+     setTimeout(()=>{
+       portada.style.display = 'none'
+     },2000);
+     setTimeout(()=>{
+       home.style.display = 'block'
+     },100);
+   },5000);
+});
 $(document).ready(function() {
     $('.hover').bind('touchstart touchend', function(e) {
         e.preventDefault();
