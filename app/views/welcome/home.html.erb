@@ -1,0 +1,46 @@
+<div class="home-container" style="display:block">
+  <% if @portadas.count > 0 %>
+  <div class="sliders">
+    <%=image_tag(@portadas.first.imgcover.url(:normal), class: "img-slider myslide activo")%>
+    <%=image_tag(@portadas.second.imgcover.url(:normal), class: "img-slider myslide")%>
+    <%=image_tag(@portadas.last.imgcover.url(:normal), class: "img-slider myslide")%>
+  </div>
+
+    <div class="home-content">
+      <div class="side-sponsors">
+        <div class="logo">
+          <%= link_to root_path do%>
+          <li>ALTOS<br>TONOS</li>
+          <% end %>
+        </div>
+
+      </div>
+      <div class="titulares">
+        <div class="tit1 act">
+          <h1 class="titulo"><%=link_to @portadas.first.title, report_path(@portadas.first)%></h1>
+          <p class="descripchion">
+            <%=@portadas.first.subtitle%>
+          </p>
+        </div>
+        <div class="tit1">
+          <h1 class="titulo"><%=link_to @portadas.second.title, report_path(@portadas.second)%></h1>
+          <p class="descripchion">
+            <%=@portadas.second.subtitle%>
+          </p>
+        </div>
+        <div class="tit1">
+          <h1 class="titulo"><%=link_to @portadas.last.title, report_path(@portadas.last)%></h1>
+          <p class="descripchion">
+            <%=@portadas.last.subtitle%>
+          </p>
+        </div>
+      </div>
+      <div class="dots">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+  </div>
+  <% end %>
+
+</div>

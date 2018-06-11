@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   # resources :events
   root 'welcome#index'
+
+  get '/home', to: 'welcome#home'
   resources :artists
   # resources :videos
   resources :reviews
