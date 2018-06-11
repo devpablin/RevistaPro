@@ -305,6 +305,11 @@ hr{
 
 }
 @media only screen and (max-width:725px) {
+  .cover-magazzine{
+    img{
+      left: -85%!important;
+    }
+  }
   .titulares{
     width: 80%;
     overflow-x: scroll;
