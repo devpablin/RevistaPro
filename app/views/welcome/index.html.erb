@@ -25,19 +25,19 @@
       </div>
       <div class="titulares">
         <div class="tit1 act">
-          <h1 class="titulo"><%=@portadas.first.title%></h1>
+          <h1 class="titulo"><%=link_to @portadas.first.title, report_path(@portadas.first)%></h1>
           <p class="descripchion">
             <%=@portadas.first.subtitle%>
           </p>
         </div>
         <div class="tit1">
-          <h1 class="titulo"><%=@portadas.second.title%></h1>
+          <h1 class="titulo"><%=link_to @portadas.second.title, report_path(@portadas.second)%></h1>
           <p class="descripchion">
             <%=@portadas.second.subtitle%>
           </p>
         </div>
         <div class="tit1">
-          <h1 class="titulo"><%=@portadas.last.title%></h1>
+          <h1 class="titulo"><%=link_to @portadas.last.title, report_path(@portadas.last)%></h1>
           <p class="descripchion">
             <%=@portadas.last.subtitle%>
           </p>

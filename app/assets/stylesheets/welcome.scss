@@ -107,6 +107,12 @@
     align-self: center;
     .tit1{
       display:none;
+      a{
+        color: white;
+      }
+      a:hover{
+        text-decoration: none;
+      }
       .titulo{
         font-size: 50px;
         font-family: "EuclidFlex Bold";
