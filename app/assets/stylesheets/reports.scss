@@ -305,6 +305,11 @@ hr{
 
 }
 @media only screen and (max-width:725px) {
+  .titulares{
+    width: 80%;
+    overflow-x: scroll;
+
+  }
   .highlights-container{
     flex-direction: column!important;
     .highlight1{
