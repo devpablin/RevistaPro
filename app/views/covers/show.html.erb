@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Edicion:</strong>
+  <%= @cover.edicion %>
+</p>
+
+<%= image_tag(@cover.img.url(:normal))%>
+
+<%= link_to 'Edit', edit_cover_path(@cover) %> |
+<%= link_to 'Back', covers_path %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :covers
   mount Ckeditor::Engine => '/ckeditor'
   # resources :events
   root 'welcome#index'

@@ -1,3 +1,10 @@
+<div class="cover-magazzine">
+  <%= image_tag(@cover.img.url(:normal))%>
+</div>
+<script type="text/javascript">
+  let portada = document.getElementsByClassName("cover-magazzine")[0];
+  setTimeout(()=>{portada.style.opacity = '0'},5000);
+</script>
 <div class="home-container">
   <% if @portadas.count > 0 %>
   <div class="sliders">
