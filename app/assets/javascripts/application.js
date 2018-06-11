@@ -27,11 +27,11 @@ $(window).load(function(){
      portada.style.opacity = '0';
      setTimeout(()=>{
        portada.style.display = 'none'
-     },2000);
+     },1000);
      setTimeout(()=>{
        home.style.display = 'block'
      },100);
-   },5000);
+   },3500);
 });
 $(document).ready(function() {
     $('.hover').bind('touchstart touchend', function(e) {
