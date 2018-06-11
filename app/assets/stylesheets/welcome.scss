@@ -21,8 +21,17 @@
   -webkit-transition: ease 2s; /* Safari */
   transition: ease 2s;
   img{
+    min-height: 100vh;
+    min-width: 1000px;
+
+    /* Set up proportionate scaling */
     width: 100%;
-    height: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: -90%;
   }
 }
 .construccion{
