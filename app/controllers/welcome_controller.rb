@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
     @cover = Cover.first
-    @portadas = Report.where(cover: "TRUE").first(3)
+    @portadas = Report.where(cover: "TRUE").sort_by(&:updated_at).reverse!.first(3)
   end
   def building
 
